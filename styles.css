@@ -6,3 +6,198 @@ available in the app when your plugin is enabled.
 If your plugin does not need CSS, delete this file.
 
 */
+
+/* Webhook table styling */
+.webhook-table-container {
+    margin-top: 1em;
+}
+
+.webhook-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5em;
+    table-layout: fixed;
+}
+
+.webhook-table th,
+.webhook-table td {
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.webhook-table th:first-child,
+.webhook-table td:first-child {
+    width: 25%;
+}
+
+.webhook-table th:nth-child(2),
+.webhook-table td:nth-child(2) {
+    width: 55%;
+    word-break: break-all;
+}
+
+.webhook-table th:last-child,
+.webhook-table td:last-child {
+    width: 20%;
+}
+
+.webhook-table th {
+    background-color: var(--background-secondary);
+    font-weight: 600;
+}
+
+.webhook-table tr:hover {
+    background-color: var(--background-modifier-hover);
+}
+
+/* Active webhook row styling */
+.webhook-table tr.webhook-row-active {
+    background-color: rgba(135, 206, 250, 0.2); /* Light blue background */
+}
+
+.webhook-table tr.webhook-row-active:hover {
+    background-color: rgba(135, 206, 250, 0.3); /* Slightly darker on hover */
+}
+
+.webhook-table button {
+    padding: 4px 8px;
+    font-size: 11px;
+    margin: 0 1px;
+    border-radius: 3px;
+    border: 1px solid var(--background-modifier-border);
+    background-color: var(--interactive-normal);
+    color: var(--text-normal);
+    cursor: pointer;
+    min-width: 60px;
+    white-space: nowrap;
+}
+
+.webhook-table button:hover {
+    background-color: var(--interactive-hover);
+}
+
+.webhook-table button.mod-warning {
+    background-color: var(--color-red);
+    color: var(--text-on-accent);
+    border-color: var(--color-red);
+}
+
+.webhook-table button.mod-warning:hover {
+    background-color: var(--color-red);
+    opacity: 0.8;
+}
+
+.webhook-table button.mod-destructive {
+    background-color: var(--color-red);
+    color: var(--text-on-accent);
+    border-color: var(--color-red);
+}
+
+.webhook-table button.mod-destructive:hover {
+    background-color: var(--color-red);
+    opacity: 0.8;
+}
+
+.webhook-table button.mod-secondary {
+    background-color: var(--interactive-normal);
+    color: var(--text-normal);
+    border-color: var(--background-modifier-border);
+}
+
+.webhook-table button.mod-secondary:hover {
+    background-color: var(--interactive-hover);
+}
+
+.webhook-table button.mod-cta {
+    background-color: var(--interactive-accent);
+    color: var(--text-on-accent);
+    border-color: var(--interactive-accent);
+}
+
+.webhook-table button.mod-cta:hover {
+    background-color: var(--interactive-accent-hover);
+}
+
+/* Modal styling */
+.modal-button-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.modal-button-container button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid var(--background-modifier-border);
+    background-color: var(--interactive-normal);
+    color: var(--text-normal);
+    cursor: pointer;
+}
+
+.modal-button-container button:hover {
+    background-color: var(--interactive-hover);
+}
+
+.modal-button-container button.mod-cta {
+    background-color: var(--interactive-accent);
+    color: var(--text-on-accent);
+    border-color: var(--interactive-accent);
+}
+
+.modal-button-container button.mod-cta:hover {
+    background-color: var(--interactive-accent-hover);
+}
+
+/* Discord Message Block Styling */
+.discord-message-block {
+    border: 2px solid #5865f2;
+    border-radius: 8px;
+    background-color: rgba(88, 101, 242, 0.1);
+    margin: 1em 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.discord-message-header {
+    background-color: #5865f2;
+    color: white;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.discord-message-content {
+    padding: 12px;
+    color: var(--text-normal);
+    line-height: 1.5;
+    white-space: pre-wrap;
+    font-family: var(--font-monospace);
+}
+
+.discord-send-button {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.discord-send-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.discord-send-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
